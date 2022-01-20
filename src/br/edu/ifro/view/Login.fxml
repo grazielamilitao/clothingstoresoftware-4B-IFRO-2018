@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="cena" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.LoginController">
+<AnchorPane id="AnchorPane" fx:id="painel" prefHeight="350.0" prefWidth="450.0" style="-fx-background-color: ffffff;">
+                  <JFXPasswordField fx:id="txtSenha" layoutX="205.0" layoutY="218.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Label layoutX="208.0" layoutY="113.0" text="Usuário">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="205.0" layoutY="193.0" text="Senha">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtUsuario" layoutX="208.0" layoutY="139.0" prefHeight="25.0" prefWidth="168.0" />
+                  <JFXButton fx:id="botentrar" buttonType="RAISED" defaultButton="true" layoutX="219.0" layoutY="259.0" onAction="#entrar" prefHeight="61.0" prefWidth="140.0" ripplerFill="#4dbce8" text="ENTRAR">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="111.0" fitWidth="168.0" layoutX="142.0">
+                     <image>
+                        <Image url="@../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="180.0" layoutX="8.0" layoutY="131.0">
+                     <image>
+                        <Image url="@../img/Privacy-icon_01.png" />
+                     </image>
+                  </ImageView>
+
+</AnchorPane>
+</StackPane>

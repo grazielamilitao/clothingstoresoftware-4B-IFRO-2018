@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="cena" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.PagamentoController">
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="802.0" style="-fx-background-color: ffffff;">
+   <children>
+      <Label layoutX="106.0" layoutY="128.0" text="Dados Compra">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="116.0" fitWidth="183.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="228.0" layoutY="137.0" prefHeight="3.0" prefWidth="548.0" />
+      <Separator layoutX="29.0" layoutY="136.0" prefHeight="3.0" prefWidth="71.0" />
+      <Separator layoutX="29.0" layoutY="137.0" orientation="VERTICAL" prefHeight="198.0" prefWidth="0.0" />
+      <Separator layoutX="773.0" layoutY="137.0" orientation="VERTICAL" prefHeight="198.0" prefWidth="6.0" />
+      <Separator layoutX="31.0" layoutY="335.0" prefHeight="3.0" prefWidth="745.0" />
+      <Label layoutX="51.0" layoutY="164.0" text="Código Compra">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCompra" layoutX="51.0" layoutY="185.0" prefHeight="25.0" prefWidth="105.0" />
+      <JFXTextField fx:id="txtQuantProduto" layoutX="212.0" layoutY="187.0" prefHeight="25.0" prefWidth="133.0" />
+      <JFXTextField fx:id="txtValor" layoutX="390.0" layoutY="270.0" prefHeight="25.0" prefWidth="124.0" />
+      <Label layoutX="211.0" layoutY="163.0" text="Quantidade Produtos">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateLancamento" layoutX="390.0" layoutY="185.0" prefHeight="30.0" prefWidth="161.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <Label layoutX="393.0" layoutY="164.0" text="Lançamento">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="164.0" text="Vencimento">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateVencimento" layoutX="595.0" layoutY="185.0" prefHeight="33.0" prefWidth="161.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <Label layoutX="393.0" layoutY="246.0" text="Valor Compra">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="32.0" layoutY="352.0" prefHeight="151.0" prefWidth="745.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Pagamento">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="712.0" style="-fx-background-color: ffffff;">
+                     <children>
+                        <Label layoutX="21.0" layoutY="26.0" text="Data Pagamento">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="datePagamento" layoutX="21.0" layoutY="51.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: ffffff;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></DatePicker>
+                        <JFXTextField fx:id="txtValorCopia" layoutX="296.0" layoutY="49.0" prefHeight="25.0" prefWidth="124.0" />
+                        <Label layoutX="296.0" layoutY="26.0" text="Valor Compra">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtValorTotal" layoutX="578.0" layoutY="51.0" prefHeight="25.0" prefWidth="124.0" />
+                        <Label layoutX="578.0" layoutY="26.0" text="Valor Total">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Valores Atualizados">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ffffff;">
+                     <children>
+                        <Label layoutX="29.0" layoutY="31.0" text="Desconto">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="283.0" layoutY="31.0" text="Juros">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="540.0" layoutY="31.0" text="Valor Atualizado">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtDesconto" layoutX="29.0" layoutY="49.0" prefHeight="25.0" prefWidth="105.0" />
+                        <JFXTextField fx:id="txtJuros" layoutX="283.0" layoutY="49.0" prefWidth="121.0" />
+                        <JFXTextField fx:id="txtValorAtualizado" layoutX="540.0" layoutY="49.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <JFXButton fx:id="btnPagamento" buttonType="RAISED" defaultButton="true" layoutX="208.0" layoutY="511.0" onAction="#pagamento" prefHeight="80.0" prefWidth="140.0" ripplerFill="#4dbce8" text="PAGAMENTO">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCancelar" buttonType="RAISED" cancelButton="true" layoutX="469.0" layoutY="511.0" onMouseClicked="#cancelar" prefHeight="80.0" prefWidth="140.0" ripplerFill="#4dbce8" text="CANCELAR">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="txtFornecedor" layoutX="51.0" layoutY="270.0" prefHeight="25.0" prefWidth="309.0" />
+      <Label layoutX="51.0" layoutY="246.0" text="Fornecedor">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="246.0" text="Forma Pagamento">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxTipoPagamento" layoutX="539.0" layoutY="270.0" prefHeight="25.0" prefWidth="220.0" promptText="-----------------------------------------">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+   </children>
+</AnchorPane>
+</StackPane>

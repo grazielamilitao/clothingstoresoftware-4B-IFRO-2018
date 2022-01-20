@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="cena" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.CompraController">
+<AnchorPane id="AnchorPane" prefHeight="724.0" prefWidth="751.0" style="-fx-background-color: ffffff;">
+   <children>
+      <ImageView fitHeight="130.0" fitWidth="196.0" layoutX="279.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="53.0" layoutY="131.0" text="Codigo:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="184.0" text="Data:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="139.0" text="Juros :">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="238.0" text="Forma de Pagamento:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="174.0" text="Desconto:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="448.0" layoutY="254.0" text="Valor Liquido:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="450.0" layoutY="213.0" text="Valor Bruto:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="563.0" text="Valor Total:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="41.0" layoutY="121.0" prefHeight="3.0" prefWidth="671.0" />
+      <Separator layoutX="710.0" layoutY="122.0" orientation="VERTICAL" prefHeight="203.0" prefWidth="6.0" />
+      <Separator layoutX="38.0" layoutY="122.0" orientation="VERTICAL" prefHeight="203.0" prefWidth="6.0" />
+      <Separator layoutX="41.0" layoutY="325.0" prefHeight="3.0" prefWidth="671.0" />
+      <Separator layoutX="428.0" layoutY="121.0" orientation="VERTICAL" prefHeight="203.0" prefWidth="6.0" />
+      <Label layoutX="395.0" layoutY="567.0" text="R$">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="txtValorTotal" layoutX="434.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00,00">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtCodigo" editable="false" layoutX="58.0" layoutY="146.0" prefHeight="23.0" prefWidth="64.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cbxFormaPagamento" layoutX="53.0" layoutY="267.0" prefHeight="25.0" prefWidth="174.0" promptText="------------------------------">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtValorLiquido" layoutX="537.0" layoutY="241.0" prefHeight="26.0" prefWidth="162.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtValorBruto" layoutX="538.0" layoutY="200.0" prefHeight="26.0" prefWidth="162.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDesconto" layoutX="538.0" layoutY="161.0" prefHeight="26.0" prefWidth="162.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtJuros" layoutX="537.0" layoutY="128.0" prefHeight="26.0" prefWidth="162.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnCalcular" layoutX="507.0" layoutY="280.0" onAction="#calcular" prefHeight="34.0" prefWidth="127.0" text="Calcular">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCadastrar" buttonType="RAISED" defaultButton="true" layoutX="70.0" layoutY="604.0" onAction="#cadastrar" prefHeight="87.0" prefWidth="140.0" ripplerFill="#4dbce8" text="Cadastrar">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCancelar" buttonType="RAISED" cancelButton="true" layoutX="534.0" layoutY="604.0" onAction="#fechar" prefHeight="87.0" prefWidth="140.0" ripplerFill="#4dbce8" text="Cancelar">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLimpar" buttonType="RAISED" layoutX="304.0" layoutY="604.0" onAction="#limpar" prefHeight="87.0" prefWidth="140.0" ripplerFill="#4dbce8" text="Limpar">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <DatePicker fx:id="dateCompra" layoutX="53.0" layoutY="206.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <JFXButton fx:id="btnCadastrarProduto" layoutX="273.0" layoutY="229.0" onAction="#cadastrarProduto" prefHeight="34.0" prefWidth="127.0" text="Inserir">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="278.0" layoutY="198.0" text="Cadastrar produto:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNomeProduto" layoutX="67.0" layoutY="330.0" prefHeight="25.0" prefWidth="268.0" promptText="Nome ou código" />
+      <JFXTextField fx:id="txtQuantProduto" layoutX="368.0" layoutY="330.0" prefHeight="25.0" prefWidth="127.0" promptText="Quantidade" />
+      <JFXButton fx:id="btnInserirProduto" layoutX="534.0" layoutY="334.0" onAction="#inserirProduto" prefHeight="25.0" prefWidth="140.0" text="Inserir" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+         <TableView fx:id="tbCompras" layoutX="40.0" layoutY="369.0" prefHeight="186.0" prefWidth="671.0">
+           <columns>
+              <TableColumn maxWidth="362.0" minWidth="150" prefWidth="347.0" text="Produto">
+                <cellValueFactory><PropertyValueFactory property="produto" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn maxWidth="390.0" minWidth="50" prefWidth="135.0" text="Quantidade">
+                <cellValueFactory><PropertyValueFactory property="quantidade" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn maxWidth="440.0" minWidth="100" prefWidth="188.0" text="Valor">
+                <cellValueFactory><PropertyValueFactory property="valor" />
+                </cellValueFactory>
+             </TableColumn>
+           </columns>
+         </TableView>
+   </children>
+  </AnchorPane>
+</StackPane>

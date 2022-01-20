@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="636.0" prefWidth="1172.0" style="-fx-background-color: #FFFFFF;" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.MenuPrincipalController">
+   <children>
+      <MenuBar layoutX="-1.0" layoutY="-3.0" prefHeight="32.0" prefWidth="1172.0" style="-fx-background-color: #FFFFFF;">
+         <menus>
+            <Menu mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Cadastros">
+               <items>
+                  <MenuItem fx:id="cadCliente" mnemonicParsing="false" onAction="#chamarCliente" text="Cadastro de Cliente" />
+                  <MenuItem fx:id="cadFuncionario" mnemonicParsing="false" onAction="#chamarFunc" text="Cadastro de Funcionario" />
+                  <MenuItem fx:id="cadFornecedor" mnemonicParsing="false" onAction="#chamarForn" text="Cadastro de Fornecedor" />
+                  <MenuItem fx:id="cadProduto" mnemonicParsing="false" onAction="#chamarProd" text="Cadastro de Produto" />
+                  <MenuItem fx:id="cadCompra" mnemonicParsing="false" onAction="#chamarCompra" text="Cadastro de Compra" />
+                  <MenuItem fx:id="inserirVenda" mnemonicParsing="false" onAction="#chamarVenda" text="Cadastro de Venda" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Financeiro">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Caixa" />
+                  <MenuItem mnemonicParsing="false" onAction="#chamarRec" text="Recebimento" />
+                  <MenuItem mnemonicParsing="false" onAction="#chamarPag" text="Pagamento" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Relatório de Entradas e Saídas" />
+                  <MenuItem mnemonicParsing="false" text="Relatório de Estoque" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Ajuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Informações" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fitHeight="640.0" fitWidth="1194.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/menu.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="83.0" layoutX="488.0" layoutY="120.0" onMouseClicked="#chamarFunc2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cadastrarFuncionario.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="83.0" layoutX="384.0" layoutY="197.0" onMouseClicked="#chamarCliente2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cadastrarCliente.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="81.0" layoutX="624.0" layoutY="131.0" onMouseClicked="#chamarForn2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cadastrarFornecedor.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="729.0" layoutY="195.0" onMouseClicked="#chamarProd2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cadastrarProduto%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="81.0" layoutX="547.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/caixa%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="77.0" layoutX="749.0" layoutY="315.0" onMouseClicked="#chamarCompra2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/compra%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="349.0" layoutY="314.0" onMouseClicked="#chamarVenda2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/venda%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="77.0" layoutX="691.0" layoutY="432.0" onMouseClicked="#chamarRec2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/recebimento%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="76.0" layoutX="412.0" layoutY="431.0" onMouseClicked="#chamarPag2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pagamento%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="104.0" layoutX="533.0" layoutY="286.0">
+         <image>
+            <Image url="@../img/menuprincipal1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnFechar" fitHeight="44.0" fitWidth="55.0" layoutX="1071.0" layoutY="583.0" onMouseClicked="#fecharPrograma" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/fechar%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

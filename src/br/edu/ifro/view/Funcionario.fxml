@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="cena" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.FuncionarioController">
+
+<AnchorPane id="AnchorPane" prefHeight="618.0" prefWidth="895.0" style="-fx-background-color: ffffff;">
+   <children>
+      <Label layoutX="38.0" layoutY="124.0" text="Nome:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="60.0" text="Código:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="643.0" layoutY="128.0" text="CPF:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Label layoutX="643.0" layoutY="196.0" text="RG:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="196.0" text="Telefone:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="193.0" text="Celular:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="193.0" text="Data de Nascimento:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="264.0" text="Sexo:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="264.0" layoutY="264.0" text="Cargo:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Label layoutX="424.0" layoutY="266.0" text="Salario:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Label layoutX="580.0" layoutY="259.0" text="Email:">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="107.0" fitWidth="180.0" layoutX="360.0" layoutY="7.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="dataNascimento" layoutX="443.0" layoutY="225.0" prefHeight="25.0" prefWidth="155.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <TabPane layoutX="38.0" layoutY="324.0" prefHeight="200.0" prefWidth="824.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Endereço">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="114.0" prefWidth="824.0">
+                     <children>
+                        <Label layoutX="612.0" layoutY="72.0" text="CEP:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="486.0" layoutY="72.0" text="Número:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="3.0" layoutY="16.0" text="Estado:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="72.0" text="Rua:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="401.0" layoutY="16.0" text="Bairro:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="200.0" layoutY="16.0" text="Cidade:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtBairro" layoutX="402.0" layoutY="32.0" prefHeight="26.0" prefWidth="418.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCep" layoutX="611.0" layoutY="86.0" prefHeight="26.0" prefWidth="197.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtNumero" layoutX="486.0" layoutY="86.0" prefHeight="26.0" prefWidth="82.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtRua" layoutX="3.0" layoutY="86.0" prefHeight="26.0" prefWidth="442.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cbxCidade" layoutX="199.0" layoutY="31.0" prefHeight="25.0" prefWidth="149.0" promptText="--------------------------">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXComboBox>
+                        <JFXComboBox fx:id="cbxEstado" layoutX="3.0" layoutY="33.0" prefHeight="25.0" prefWidth="149.0" promptText="--------------------------">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXComboBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Cadastro de Usuário">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="73.0" text="Senha:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="14.0" text="Usuario:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtLogin" layoutX="14.0" layoutY="30.0" prefHeight="26.0" prefWidth="180.0">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                           <JFXPasswordField fx:id="txtSenha" layoutX="14.0" layoutY="102.0" prefHeight="25.0" prefWidth="180.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <JFXTextField fx:id="txtId" editable="false" layoutX="36.0" layoutY="76.0" prefHeight="26.0" prefWidth="59.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbxCargo" layoutX="262.0" layoutY="277.0" prefHeight="25.0" prefWidth="128.0" promptText="----------------------">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXRadioButton fx:id="rFem" layoutX="41.0" layoutY="289.0" prefHeight="17.0" prefWidth="76.0" text="Feminino">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="sexo" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXTextField fx:id="txtNome" layoutX="38.0" layoutY="138.0" prefHeight="26.0" prefWidth="549.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCpf" layoutX="642.0" layoutY="138.0" prefHeight="26.0" prefWidth="197.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTelefone" layoutX="38.0" layoutY="212.0" prefHeight="26.0" prefWidth="172.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCelular" layoutX="236.0" layoutY="212.0" prefHeight="26.0" prefWidth="172.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtRg" layoutX="645.0" layoutY="212.0" prefHeight="26.0" prefWidth="205.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSalario" layoutX="424.0" layoutY="276.0" prefHeight="26.0" prefWidth="128.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" layoutX="580.0" layoutY="276.0" prefHeight="26.0" prefWidth="274.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXRadioButton fx:id="rMasc" layoutX="141.0" layoutY="289.0" prefHeight="17.0" prefWidth="76.0" text="Masculino" toggleGroup="$sexo">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXButton fx:id="btnCadastrar" buttonType="RAISED" defaultButton="true" layoutX="166.0" layoutY="510.0" onAction="#Cadastrar" prefHeight="80.0" prefWidth="140.0" ripplerFill="#4dbce8" text="CADASTRAR">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLimpar" buttonType="RAISED" layoutX="372.0" layoutY="510.0" onAction="#Limpar" prefHeight="80.0" prefWidth="140.0" ripplerFill="#4dbce8" text="LIMPAR">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCancelar" buttonType="RAISED" cancelButton="true" layoutX="574.0" layoutY="510.0" onAction="#Cancelar" prefHeight="80.0" prefWidth="140.0" ripplerFill="#4dbce8" text="CANCELAR">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
+</StackPane>
